@@ -3,5 +3,13 @@
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
-
+<p>
+    The date is: 
+    <script>
+        if (moment("40/07/2018", "DD/MM/YYYY"))
+            document.write("valid");
+        else
+            document.write("invalid");
+    </script>
+</p>
 <p>Use this area to provide additional information.</p>

@@ -8,13 +8,9 @@ namespace WordLearnerMVC
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            var errorHandler = new HandleErrorAttribute();
-            filters.Add(errorHandler);
-        }
-
-        private static void onException(ExceptionContext obj)
-        {
-            throw new NotImplementedException();
+            //var errorHandler = new HandleErrorAttribute();
+            //errorHandler.View
+            //filters.Add(errorHandler);
         }
     }
 }
