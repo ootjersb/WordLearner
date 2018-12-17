@@ -1,0 +1,33 @@
+﻿@model WordLearnerMVC.Models.Practice
+
+@{
+    ViewBag.Title = "Train";
+}
+
+<h2>Train</h2>
+
+<div>
+    <h4>Practice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Word.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Word.Description)
+        </dd>
+
+    </dl>
+    <p>Answer</p>
+    <ol>
+        <li>@Html.DisplayFor(model => model.Choices[0].Description)</li>
+        <li>@Html.DisplayFor(model => model.Choices[1].Description)</li>
+        <li>@Html.DisplayFor(model => model.Choices[2].Description)</li>
+        <li>@Html.DisplayFor(model => model.Choices[3].Description)</li>
+    </ol>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

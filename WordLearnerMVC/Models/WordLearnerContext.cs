@@ -1,4 +1,4 @@
-namespace WordLearnerMVC
+namespace WordLearnerMVC.Models
 {
     using System;
     using System.Data.Entity;
@@ -18,7 +18,7 @@ namespace WordLearnerMVC
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Word> Words { get; set; }
         public virtual DbSet<WordType> WordTypes { get; set; }
-        public virtual DbSet<Practice> Practices { get; set; }
+        public virtual DbSet<PracticeRecord> Practices { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

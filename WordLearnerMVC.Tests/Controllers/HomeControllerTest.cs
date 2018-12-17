@@ -35,7 +35,7 @@ namespace WordLearnerMVC.Tests.Controllers
             ViewResult result = controller.About() as ViewResult;
 
             // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            Assert.AreEqual("WordLearner is a tool to help you memorize words when learning a new language.", result.ViewBag.Message);
         }
 
         [TestMethod]

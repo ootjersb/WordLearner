@@ -1,4 +1,4 @@
-namespace WordLearnerMVC
+namespace WordLearnerMVC.Models
 {
     using System;
     using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace WordLearnerMVC
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            Practices = new HashSet<Practice>();
+            Practices = new HashSet<PracticeRecord>();
         }
 
         [StringLength(50)]
@@ -30,6 +30,6 @@ namespace WordLearnerMVC
         public virtual Language Language1 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Practice> Practices { get; set; }
+        public virtual ICollection<PracticeRecord> Practices { get; set; }
     }
 }

@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WordLearnerMVC;
+using WordLearnerMVC.Models;
 
 namespace WordLearnerMVC.Controllers
 {

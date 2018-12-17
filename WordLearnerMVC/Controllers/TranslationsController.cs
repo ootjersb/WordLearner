@@ -7,12 +7,13 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WordLearnerMVC;
+using WordLearnerMVC.Models;
 
 namespace WordLearnerMVC.Controllers
 {
     public class TranslationsController : Controller
     {
-        private WordLearnerContext db = new WordLearnerContext();
+        private readonly WordLearnerContext db = new WordLearnerContext();
 
         // GET: Translations
         public ActionResult Index()
@@ -110,6 +111,8 @@ namespace WordLearnerMVC.Controllers
             {
                 return HttpNotFound();
             }
+            db.Translations.Remove(translation);
+            db.SaveChanges();
             return View(translation);
         }
 

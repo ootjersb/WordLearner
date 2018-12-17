@@ -1,4 +1,4 @@
-namespace WordLearnerMVC
+namespace WordLearnerMVC.Models
 {
     using System;
     using System.Collections.Generic;
@@ -12,7 +12,7 @@ namespace WordLearnerMVC
         public Word()
         {
             Translations = new HashSet<Translation>();
-            Practices = new HashSet<Practice>();
+            Practices = new HashSet<PracticeRecord>();
         }
 
         public int WordID { get; set; }
@@ -34,7 +34,7 @@ namespace WordLearnerMVC
         public virtual ICollection<Translation> Translations { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Practice> Practices { get; set; }
+        public virtual ICollection<PracticeRecord> Practices { get; set; }
 
         [Display(Name ="Word Type")]
         public virtual WordType WordType { get; set; }

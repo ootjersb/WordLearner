@@ -165,9 +165,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Language.cs" />
+    <Compile Include="Models\Practice.cs" />
     <Compile Include="Models\TryOut.cs" />
     <Compile Include="Models\WordLearnerContext.cs" />
-    <Compile Include="Models\Practice.cs" />
+    <Compile Include="Models\PracticeRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sysdiagram.cs" />
     <Compile Include="Models\Translation.cs" />
@@ -237,10 +238,10 @@
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\TryOut\Create.cshtml" />
+    <Content Include="Views\Practice\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Practice\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
