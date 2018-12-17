@@ -12,7 +12,7 @@ namespace WordLearnerMVC.Controllers
 {
     public class WordsController : Controller
     {
-        private WordLearnerContext db = new WordLearnerContext();
+        private readonly WordLearnerContext db = new WordLearnerContext();
 
         // GET: Words
         public ActionResult Index()
@@ -110,6 +110,8 @@ namespace WordLearnerMVC.Controllers
             {
                 return HttpNotFound();
             }
+            db.Words.Remove(word);
+            db.SaveChanges();
             return View(word);
         }
 

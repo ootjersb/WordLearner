@@ -12,7 +12,7 @@ namespace WordLearnerMVC.Controllers
 {
     public class UsersController : Controller
     {
-        private WordLearnerContext db = new WordLearnerContext();
+        private readonly WordLearnerContext db = new WordLearnerContext();
 
         // GET: Users
         public ActionResult Index()
@@ -95,21 +95,6 @@ namespace WordLearnerMVC.Controllers
             }
             ViewBag.DefDestinationLanguageID = new SelectList(db.Languages, "LanguageID", "LanguageName", user.DefDestinationLanguageID);
             ViewBag.DefSourceLanguageID = new SelectList(db.Languages, "LanguageID", "LanguageName", user.DefSourceLanguageID);
-            return View(user);
-        }
-
-        // GET: Users/Delete/5
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            User user = db.Users.Find(id);
-            if (user == null)
-            {
-                return HttpNotFound();
-            }
             return View(user);
         }
 

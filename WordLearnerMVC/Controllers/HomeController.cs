@@ -22,10 +22,9 @@ namespace WordLearnerMVC.Controllers
 
         public ActionResult Contact()
         {
-            throw new NotImplementedException();
-            //ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your contact page.";
 
-            //return View();
+            return View();
         }
     }
 }

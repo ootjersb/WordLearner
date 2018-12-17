@@ -3,11 +3,12 @@ using System.Web.Optimization;
 
 namespace WordLearnerMVC
 {
-    public class BundleConfig
+    public static class BundleConfig
     {
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+#pragma warning disable S1075 // URIs should not be hardcoded
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -27,7 +28,7 @@ namespace WordLearnerMVC
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
-
+#pragma warning restore S1075 // URIs should not be hardcoded
         }
     }
 }
